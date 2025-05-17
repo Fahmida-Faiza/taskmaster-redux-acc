@@ -46,9 +46,9 @@ const onCancel = () =>{
   <label htmlFor="title">Priority</label>
 <select defaultValue="Priority" id="priority"{...register('priority')} className="select">
   
-  <option>Crimson</option>
-  <option>Amber</option>
-  <option>Velvet</option>
+  <option>high</option>
+  <option>medium</option>
+  <option>low</option>
 </select>
 
             
