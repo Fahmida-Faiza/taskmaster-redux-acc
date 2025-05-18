@@ -32,8 +32,14 @@ else{
 }
 },
 // remove kora
-removeTask: (state, payload) =>{
+removeTask: (state, {payload}) =>{
  state.tasks.filter(item => item.id !== payload)
+},
+
+// update kora
+updateStatus: (state, {payload}) => {
+  const target= state.tasks.find(item => item.id=== payload.id);
+  target.status= payload.status;
 }
 
 
@@ -42,7 +48,7 @@ removeTask: (state, payload) =>{
 });
 
 
-export const {addTask} = tasksSlice.actions;
+export const {addTask, updateStatus} = tasksSlice.actions;
 
 
 export default tasksSlice.reducer;
