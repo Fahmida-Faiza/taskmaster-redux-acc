@@ -1,6 +1,6 @@
 import { ArrowRightIcon, TrashIcon } from '@heroicons/react/24/outline';
 import { useDispatch } from 'react-redux';
-import { updateStatus } from '../../redux/features/tasks/tasksSlice';
+import { removeTask, updateStatus } from '../../redux/features/tasks/tasksSlice';
 
 const TaskCard = ({task}) => {
  let updatedStatus;
@@ -25,7 +25,7 @@ const dispatch = useDispatch()
       <div className="flex justify-between mt-3">
         <p>{task?.date}</p>
         <div className="flex gap-3">
-          <button  title="Delete">
+          <button onClick={() => dispatch(removeTask(task.id))} title="Delete">
             <TrashIcon className="h-5 w-5 text-red-500" />
           </button>
           <button
