@@ -41,7 +41,18 @@ const onCancel = () =>{
 
 
 
-
+<label htmlFor="title">
+    Assign to
+</label>
+<select 
+id="assignedTo"
+{...register('assignedTo')} className="select"
+>
+    <option value="Mir hossain">Mir hossain</option>
+    <option value="Nahid hossain">Nahid hossain</option>
+    <option value="Samin">Samin</option>
+    <option value="Ratul">Ratul</option>
+    </select>
 
   <label htmlFor="title">Priority</label>
 <select defaultValue="Priority" id="priority"{...register('priority')} className="select">
