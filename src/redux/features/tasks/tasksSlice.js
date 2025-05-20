@@ -13,6 +13,8 @@ const initialState ={
     priority: 'high',
   }
     ],
+
+    userTasks: [],
 };
 const tasksSlice = createSlice({
     name: 'tasksSlice',
