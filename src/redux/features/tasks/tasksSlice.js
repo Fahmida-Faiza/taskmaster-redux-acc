@@ -42,6 +42,15 @@ removeTask: (state, {payload}) =>{
 updateStatus: (state, {payload}) => {
   const target= state.tasks.find(item => item.id=== payload.id);
   target.status= payload.status;
+},
+
+
+userTasks: (state, {payload} ) =>{
+
+  state. userTasks = state.tasks.filter(
+    (item )=> item.assignedTo === payload
+
+    )
 }
 
 
@@ -50,7 +59,7 @@ updateStatus: (state, {payload}) => {
 });
 
 
-export const {addTask, updateStatus, removeTask} = tasksSlice.actions;
+export const {addTask, updateStatus, removeTask, userTasks} = tasksSlice.actions;
 
 
 export default tasksSlice.reducer;
