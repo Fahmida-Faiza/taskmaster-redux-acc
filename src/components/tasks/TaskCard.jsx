@@ -16,7 +16,22 @@ const TaskCard = ({task}) => {
 const dispatch = useDispatch()
   return (
        <div className="bg-secondary/10 rounded-md p-5">
-      <h1 className='text-lg'
+      <h1 className={`text-lg   ${
+
+        task.priority === 'high' ?
+        'text-red-400' : ''
+
+      } ${
+
+        task.priority === 'medium' ?
+        'text-yellow-400' : ''
+
+      } ${
+
+        task.priority === 'low' ?
+        'text-green-400' : ''
+
+      } `}
       >
         {task?.title}
       </h1>
